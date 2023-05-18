@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+<style>
+    
+    .go{
+background-image:url('bgwhite.png');
+background-repeat: no-repeat;
+background-size: cover;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 250px;
+  padding: 8px;
+  margin: 24px;
+  background-color: whitesmoke;
+  font-family: sans-serif;
+  }
+ 
+  .card img {
+      height:250px;
+      width:250px;
+  }
+ 
+  .title {
+  padding-top: 16px;
+  }
+
+  .container {
+padding: 2px 16px;
+  }
+  
+  </style>
+</head>
+<body>
+    <div class="go"><br><br>
+        <center><H1>CAMP STORE</H1></center>
+        <br><br>
+        
+        &nbsp;&nbsp;CAMP NO&nbsp;&nbsp;:&nbsp;&nbsp;<input type="text" name="cmp" placeholder="21CMP001"pattern=[2]{1}[1]{1}[C]{1}[M]{1}[P]{1}[0-9]{3} required/><BR><BR>
+          &nbsp;&nbsp;CAMPER ID&nbsp;&nbsp;:&nbsp;&nbsp;<input type="text" name="cmp" placeholder="enter your id "required/><BR><BR>
+        <div style="padding-left:85%;">
+        <button type="button" data-toggle="modal" data-target="#cart"style="font-size:20px;height:45px;width:65px;background-color:#A2C4E0;"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+          </svg>(<span class="total-count"style="font-size:20px;"></span>)</button>
+           </div>
+           <div class="row">
+            <div class="col-lg ">
+              <div class="card">
+              <img src="https://media-tommy.6thstreet.com/media/catalog/product/cache/e6956cdef1533b4c51bb49f614c56907/k/b/kb0kb074410k6-1.jpg" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="ART" >
+              <div class="container">
+                  <h5>&emsp;&emsp;&emsp;SHIRT 1</h5>
+                  <h6>Price:Rs-<s>430</s><br><br>Discount price:Rs-250 <br><br>          
+                  <a href="#" data-name="Bag1" data-price="500" class="add-to-cart btn btn-warning">Add to cart
+                      &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                         <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                         <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                       </svg></a>
+            </div></div></div>
+              <div class="col-lg ">
+                <div class="card">
+                <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/22508642/2023/3/25/6c5f1070-ab90-421e-8a2e-fbd1e4ccc2631679691490894BONKIDSBoysWhitePrintedPocketsT-shirt2.jpg" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal1"alt="ART" >
+                <div class="container"><h5>&emsp;&emsp;&emsp;SHIRT 3</h5>
+                <h6>Price:Rs-<s>200</s> <br><br>
+                  Discount price:Rs-150<br><br>
+                  <a href="#" data-name="shirt2" data-price="150" class="add-to-cart btn btn-warning">Add to cart
+                    &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                       <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                       <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                     </svg></a>
+                 </div></div></div>
+              <div class="col-lg "style="padding: 0">
+                <div class="card">
+                <img src="https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1662130112_1367320.jpg?w=360&dpr=1.5" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal2"alt="ART" >
+                <div class="container"><h5>&emsp;&emsp;&emsp;SHIRT 3</h5>
+                <h6>Price:Rs-<s>600</s> <br><br>
+                  Discount price:Rs-500<br><br>
+                  <a href="#" data-name="shirt3" data-price="500" class="add-to-cart btn btn-warning">Add to cart
+                    &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                       <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                       <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                     </svg></a>
+              </div></div></div>
+              <div class="col-lg "><div class="card">
+                <img src="https://res.cloudinary.com/teepublic/image/private/s--Mr1SOVlI--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_416/c_crop,g_north_west,h_554,w_416,x_0,y_0/g_north_west,u_upload:v1446840612:production:blanks:cmnytzrskw2rtarpswec,x_-424,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1617568874/production/designs/20838989_0.jpg" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal3"alt="ART" >
+                <div class="container"><h5>&emsp;&emsp;&emsp;SHIRT 4</h5>
+                <h6>Price:Rs-<s>450</s> <br><br>
+                  Discount price:Rs-375<br><br>
+                  <a href="#" data-name="shirt4" data-price="375" class="add-to-cart btn btn-warning">Add to cart
+                    &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                       <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                       <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                     </svg></a>
+              </div></div></div></div><br><br><br><br>
+        
+            <div class="row">
+              <div class="col-lg "><div class="card">
+                <img src="https://www.nicepng.com/png/detail/35-359972_alaska-backpack-snowberg-school-bag-backpack-aesthetic-backpack.png"class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal4" alt="ART" >
+                <div class="container"><h5>&emsp;&emsp;&emsp;Bag 1</h5>
+                <h6>Price:Rs-<s>700</s> <br><br>
+                  Discount price:Rs-500<br><br>
+                  <a href="#" data-name="Bag1" data-price="500" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+              </div></div></div>
+              <div class="col-lg "><div class="card">
+                <img src="https://m.media-amazon.com/images/I/61i2vha-WGL._SX679_.jpg"class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal5" alt="ART" >
+                <div class="container"><h5>&emsp;&emsp;&emsp;Bag 2</h5>
+                <h6>Price:Rs-<s>659</s> <br><br>
+                  Discount price:Rs-599<br><br>
+                  <a href="#" data-name="bag2" data-price="599" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+              </div></div></div>
+              <div class="col-lg "style="padding: 0"><div class="card">
+                <img src="https://m.media-amazon.com/images/I/416V0GYH2kL.jpg" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal6"alt="ART" >
+                <div class="container"><h5>&emsp;&emsp;&emsp;Bag 3</h5>
+                <h6>Price:Rs-<s>600</s> <br><br>
+                  Discount price:Rs-550<br><br>
+                  <a href="#" data-name="Bag3" data-price="550" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+              </div></div></div>
+              <div class="col-lg "><div class="card">
+                <img src="https://m.media-amazon.com/images/I/71lx4rLS+CL._AC_SX679_.jpg" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal7"alt="ART" >
+                <div class="container"><h5>&emsp;&emsp;&emsp;Bag 4</h5>
+                <h6>Price:Rs-<s>999</s> <br><br>
+                  Discount price:Rs-760<br><br>
+                  <a href="#" data-name="Bag4" data-price="760" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+              </div>
+            </div></div>
+        </div><br><br><br><br>
+        
+            <div class="row">
+                <div class="col-lg "><div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWilQgNF04QBVDZg2RirX_oXwdsUAv8oHgrw&usqp=CAU"class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal8" alt="ART" >
+                    <div class="container"><h5>&emsp;&emsp;&emsp;shoe 1</h5>
+                    <h6>Price:Rs-<s>900</s> <br><br>
+                    Discount price:Rs-850<br><br>
+                    <a href="#" data-name="shoe1" data-price="850" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+                  </div></div></div>
+                  <div class="col-lg "><div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCYiTSwVvXii2E33KfLa9x1NIb1ejiXnm-2A&usqp=CAU" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal9"alt="ART" >
+                    <div class="container"><h5>&emsp;&emsp;&emsp;shoe 2</h5>
+                    <h6>Price:Rs-<s>950</s> <br><br>
+                      Discount price:Rs-909<br><br>
+                      <a href="#" data-name="shoe2" data-price="909" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+                  </div></div></div>
+                  <div class="col-lg "style="padding: 0"><div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGqP5VAyoUo_lqBGg46v0laxUH0ExXdZf7ww&usqp=CAU" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal10"alt="ART" >
+                    <div class="container">
+                        <h5>&emsp;&emsp;&emsp;shoe 3</h5>
+                    <h6>Price:Rs-<s>959</s> <br><br>
+                      Discount price:Rs-889<br><br>
+                      <a href="#" data-name="shoe3" data-price="889" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+                  </div></div></div>
+                  <div class="col-lg "><div class="card">
+                    <img src="https://cdn.shopify.com/s/files/1/0062/1532/products/40395-4OE_WALLYAMERICANA_DENIMSTRIPE_PAIRSIDE.jpg?v=1682013461&width=400" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal11"alt="ART" >
+                    <div class="container">
+                        <h5>&emsp;&emsp;&emsp;shoe 4</h5>
+                    <h6>Price:Rs-<s>879</s> <br><br>
+                      Discount price:Rs-743<br><br>
+                      <a href="#" data-name="shoe4" data-price="743" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+                  </div></div>
+                </div>
+            </div><br><br><br>
+        
+            <div class="row">
+              <div class="col-lg "><div class="card">
+                <img src="https://ctl.s6img.com/society6/img/syPyCIxhvASu7AUVK0F9ETcjB_w/w_1500/water-bottles/18oz/straw-lid/front/~artwork,fw_3390,fh_2230,fx_-15,iw_3419,ih_2230/s6-0041/a/18803333_4925868/~~/horse-yy9-water-bottles.jpg"class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal12" alt="ART" >
+                <div class="container">
+                <h5>&emsp;&emsp;&emsp;Water bottle 1</h5>
+                <h6>Price:Rs-<s>300</s> <br><br>
+                  Discount price:Rs-250<br><br>
+                  <a href="#" data-name="Water bottle1" data-price="250" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+              </div></div></div>
+              <div class="col-lg "><div class="card">
+                <img src="https://img.ltwebstatic.com/images3_pi/2022/11/28/166962066152ebe3c011e56952b45ebc415ad4c516_thumbnail_600x.webp" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal13"alt="ART" >
+                <div class="container">
+                <h5>&emsp;&emsp;&emsp;Water bottle 2</h5>
+                <h6>Price:Rs-<s>330</s> <br><br>
+                  Discount price:Rs-250<br><br>
+                  <a href="#" data-name="Water bottle2" data-price="250" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+              </div></div></div>
+              <div class="col-lg "style="padding: 0"><div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-56NLUn3gN-VdGwoBb1CbG4GTYil-8hyGUvMVnwT1iGXQpmLuQCWcSnKr5_hzx31R6BU&usqp=CAU" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal14"alt="ART" >
+                <div class="container">
+                    <h5>&emsp;&emsp;&emsp;Water bottle 3</h5>
+                <h6>Price:Rs-<s>450</s> <br><br>
+                  Discount price:Rs-389<br><br>
+                  <a href="#" data-name="Water bottle3" data-price="389" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+              </div></div></div>
+              <div class="col-lg "><div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9O8odU_3QjvBLcSiVpQv8vbvljOAPh8Z9YF2g340v54q1Db1-o_6GU-zwVejZpVjqTUc&usqp=CAU" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal15"alt="ART" >
+                <div class="container"><h5>&emsp;&emsp;&emsp;Water bottle 4</h5>
+                <h6>Price:Rs-<s>430</s> <br><br>
+                  Discount price:Rs-250<br><br>
+                  <a href="#" data-name="Water bottle4" data-price="250" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+              </div>
+            </div></div>
+        </div>
+    
+         
+      
+    
+       
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <img src="https://media-tommy.6thstreet.com/media/catalog/product/cache/e6956cdef1533b4c51bb49f614c56907/k/b/kb0kb074410k6-1.jpg" class="img-fluid" alt="Image" style="width: 100%; height: 500px;">
+            </div>
+            
+          </div>
+        </div>
+      </div>
+        </div><div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/22508642/2023/3/25/6c5f1070-ab90-421e-8a2e-fbd1e4ccc2631679691490894BONKIDSBoysWhitePrintedPocketsT-shirt2.jpg" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1662130112_1367320.jpg?w=360&dpr=1.5" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://res.cloudinary.com/teepublic/image/private/s--Mr1SOVlI--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_416/c_crop,g_north_west,h_554,w_416,x_0,y_0/g_north_west,u_upload:v1446840612:production:blanks:cmnytzrskw2rtarpswec,x_-424,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1617568874/production/designs/20838989_0.jpg" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://www.nicepng.com/png/detail/35-359972_alaska-backpack-snowberg-school-bag-backpack-aesthetic-backpack.png" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://m.media-amazon.com/images/I/61i2vha-WGL._SX679_.jpg" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://m.media-amazon.com/images/I/416V0GYH2kL.jpg" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://m.media-amazon.com/images/I/71lx4rLS+CL._AC_SX679_.jpg" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWilQgNF04QBVDZg2RirX_oXwdsUAv8oHgrw&usqp=CAU" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+            </div>
+          </div>
+        </div>
+        </div><div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCYiTSwVvXii2E33KfLa9x1NIb1ejiXnm-2A&usqp=CAU" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGqP5VAyoUo_lqBGg46v0laxUH0ExXdZf7ww&usqp=CAU" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://cdn.shopify.com/s/files/1/0062/1532/products/40395-4OE_WALLYAMERICANA_DENIMSTRIPE_PAIRSIDE.jpg?v=1682013461&width=400" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://ctl.s6img.com/society6/img/syPyCIxhvASu7AUVK0F9ETcjB_w/w_1500/water-bottles/18oz/straw-lid/front/~artwork,fw_3390,fh_2230,fx_-15,iw_3419,ih_2230/s6-0041/a/18803333_4925868/~~/horse-yy9-water-bottles.jpg" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal13" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://img.ltwebstatic.com/images3_pi/2022/11/28/166962066152ebe3c011e56952b45ebc415ad4c516_thumbnail_600x.webp" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal14" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-56NLUn3gN-VdGwoBb1CbG4GTYil-8hyGUvMVnwT1iGXQpmLuQCWcSnKr5_hzx31R6BU&usqp=CAU" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal15" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9O8odU_3QjvBLcSiVpQv8vbvljOAPh8Z9YF2g340v54q1Db1-o_6GU-zwVejZpVjqTUc&usqp=CAU" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div></div></div>     </div>
+          </div></div>
+          <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body"style="background-image:url('bgwhite');">
+                  <table class="show-cart table">
+                    
+                  </table>
+                  <div>Total price: Rs:<span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer"style="background-image:url('bgwhite');">
+                    <button class="clear-cart btn btn-danger">Clear Cart</button>
+                  <button type="button" class="btn btn-primary"onclick="pro()">Order now</button>
+                </div>
+              </div>
+            </div>
+          </div> </div>
+          
+    <script>
+        
+var shoppingCart = (function() {
+  cart = [];
+
+  function Item(name, price, count) {
+    this.name = name;
+    this.price = price;
+    this.count = count;
+  }
+  function saveCart() {
+    sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+  }
+  function loadCart() {
+    cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+  }
+  if (sessionStorage.getItem("shoppingCart") != null) {
+    loadCart();
+  }
+  var obj = {};
+  obj.addItemToCart = function(name, price, count) {
+    for(var item in cart) {
+      if(cart[item].name === name) {
+        cart[item].count ++;
+        saveCart();
+        return;
+      }
+    }
+    var item = new Item(name, price, count);
+    cart.push(item);
+    saveCart();
+  }
+  obj.setCountForItem = function(name, count) {
+    for(var i in cart) {
+      if (cart[i].name === name) {
+        cart[i].count = count;
+        break;
+      }
+    }
+  };
+  obj.removeItemFromCart = function(name) {
+      for(var item in cart) {
+        if(cart[item].name === name) {
+          cart[item].count --;
+          if(cart[item].count === 0) {
+            cart.splice(item, 1);
+          }
+          break;
+        }
+    }
+    saveCart();
+  }
+  obj.removeItemFromCartAll = function(name) {
+    for(var item in cart) {
+      if(cart[item].name === name) {
+        cart.splice(item, 1);
+        break;
+      }
+    }
+    saveCart();
+  }
+  obj.clearCart = function() {
+    cart = [];
+    saveCart();
+  }
+  obj.totalCount = function() {
+    var totalCount = 0;
+    for(var item in cart) {
+      totalCount += cart[item].count;
+    }
+    return totalCount;
+  }
+  obj.totalCart = function() {
+    var totalCart = 0;
+    for(var item in cart) {
+      totalCart += cart[item].price * cart[item].count;
+    }
+    return Number(totalCart.toFixed(2));
+  }
+  obj.listCart = function() {
+    var cartCopy = [];
+    for(i in cart) {
+      item = cart[i];
+      itemCopy = {};
+      for(p in item) {
+        itemCopy[p] = item[p];
+      }
+      itemCopy.total = Number(item.price * item.count).toFixed(2);
+      cartCopy.push(itemCopy)
+    }
+    return cartCopy;
+  }
+  return obj;
+})();
+$('.add-to-cart').click(function(event) {
+  event.preventDefault();
+  var name = $(this).data('name');
+  var price = Number($(this).data('price'));
+  shoppingCart.addItemToCart(name, price, 1);
+  displayCart();
+});
+$('.clear-cart').click(function() {
+  shoppingCart.clearCart();
+  displayCart();
+});
+function displayCart() {
+  var cartArray = shoppingCart.listCart();
+  var output = "";
+  for(var i in cartArray) {
+    output += "<tr>"
+      + "<td>" + cartArray[i].name + "</td>" 
+      + "<td>(" + cartArray[i].price + ")</td>"
+      + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
+      + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+      + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
+      + "<td><button class='delete-item btn btn-danger bg-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+      + " = " 
+      + "<td>" + cartArray[i].total + "</td>" 
+      +  "</tr>";
+  }
+  $('.show-cart').html(output);
+  $('.total-cart').html(shoppingCart.totalCart());
+  $('.total-count').html(shoppingCart.totalCount());
+}
+$('.show-cart').on("click", ".delete-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.removeItemFromCartAll(name);
+  displayCart();
+})
+$('.show-cart').on("click", ".minus-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.removeItemFromCart(name);
+  displayCart();
+})
+$('.show-cart').on("click", ".plus-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.addItemToCart(name);
+  displayCart();
+})
+$('.show-cart').on("change", ".item-count", function(event) {
+   var name = $(this).data('name');
+   var count = Number($(this).val());
+  shoppingCart.setCountForItem(name, count);
+  displayCart();
+  
+});
+displayCart();
+function pro(){
+    
+  new swal("DONE", "Your order has been placed successfully", "success")
+  } 
+    </script>
+</body>
+</html>
